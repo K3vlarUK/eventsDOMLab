@@ -24,5 +24,13 @@ document.addEventListener('DOMContentLoaded', () => {
   const formInput = document.querySelector('#new-item-form');
   formInput.addEventListener('submit', handleFormInput);
 
+  const clearList = function () {
+    const divClear = document.querySelector('#reading-list');
+    divClear.innerHTML = "";
+  }
+
+  const deleteButton = document.querySelector('#button');
+  deleteButton.addEventListener('click', clearList);
+
   console.log('JavaScript loaded');
 })
